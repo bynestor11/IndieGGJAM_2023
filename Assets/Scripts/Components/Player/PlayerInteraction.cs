@@ -26,27 +26,7 @@ public class PlayerInteraction : MonoBehaviour
     }
     void InteractWithPuzzle() {
       if (Input.GetKeyUp("e")) {
-        if (HoldingRock) {
-          RockInteractable Actually_a_rock = Tree;
-          // align the viking to the red line in Unity
-          switch(transform.rotation) {
-            case 0:
-              Actually_a_rock.DirectionMovement = new Vector3(0,0,1);
-              Actually_a_rock.KeepMoving;
-              break;
-            case 90:
-              
-              break;
-            case 180:
-
-              break;
-            case -90:
-
-              break;
-            default:
-              
-          }
-        }
+        
         GameObject[] objectives = GameObject.FindGameObjectsWithTag("Interactable");
         GameObject objective = objectives[0];
         float minorDistance = float.PositiveInfinity;
@@ -77,7 +57,7 @@ public class PlayerInteraction : MonoBehaviour
             // animation that we got it
             if (Tree is RockInteractable) {
               HoldingRock = true;
-              RockBeingHeld = Tree;
+              RockBeingHeld = (RockInteractable)Tree;
             }
           } else {
             // shrug animation

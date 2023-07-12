@@ -12,6 +12,13 @@ public class ShittyMovement : MonoBehaviour
 
     Vector2 _MovementInput = Vector2.zero;
     float _cooldown_counter = 0;
+    [SerializeField] private Animation anim;
+    [SerializeField] private Animator animator;
+
+    void Start() {
+      anim = gameObject.GetComponent<Animation>();
+      animator = gameObject.GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,7 +34,11 @@ public class ShittyMovement : MonoBehaviour
         _MovementInput.x = Input.GetAxis("Horizontal");
         if(_MovementInput == Vector2.zero)
             _MovementInput.y = Input.GetAxis("Vertical");
-    
+        if (_MovementInput.x != 0 || _MovementInput.y != 0) {
+          animator.SetBool("Run", true);
+        } else {
+          animator.SetBool("Run", false);
+        }
         _MovementInput = _MovementInput.normalized;
         transform.position += 
                 new Vector3(_MovementInput.x, 0.0f, _MovementInput.y) 
