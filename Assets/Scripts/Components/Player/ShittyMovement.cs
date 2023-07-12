@@ -29,6 +29,8 @@ public class ShittyMovement : MonoBehaviour
             _MovementInput.y = Input.GetAxis("Vertical");
     
         _MovementInput = _MovementInput.normalized;
-        transform.position += new Vector3(_MovementInput.x, 0.0f, _MovementInput.y) * Speed;
+        transform.position += 
+                new Vector3(_MovementInput.x, 0.0f, _MovementInput.y) 
+                * Speed * Time.deltaTime;
     }
 }
