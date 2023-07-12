@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableTree : MonoBehaviour
 {
-    [SerializeField] int RequiredViking = 1;
+    [SerializeField] public int RequiredViking = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +16,5 @@ public class InteractableTree : MonoBehaviour
     {
         
     }
-
+    public int GetRequiredViking() { return RequiredViking; }
 }
