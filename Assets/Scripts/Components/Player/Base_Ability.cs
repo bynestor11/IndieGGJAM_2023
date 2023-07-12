@@ -6,5 +6,7 @@ using UnityEngine;
 
 public abstract class Base_Ability : MonoBehaviour
 {
-    public abstract void Do_Ability();
+    public readonly VIKINGABILITIES ability_id;
+
+    public abstract void Do_Ability(DIRECTIONS dir);
 }

@@ -29,8 +29,32 @@ public class ShittyMovement : MonoBehaviour
             _MovementInput.y = Input.GetAxis("Vertical");
     
         _MovementInput = _MovementInput.normalized;
+
+        _update_last_looked_at_pos(_MovementInput);
+
         transform.position += 
                 new Vector3(_MovementInput.x, 0.0f, _MovementInput.y) 
                 * Speed * Time.deltaTime;
+    }
+
+    private void _update_last_looked_at_pos(Vector3 MovementInput)
+    {
+        LastLookedAtDirection dir_obj;
+        if(!TryGetComponent<LastLookedAtDirection>(out dir_obj))
+        {
+            Debug.LogWarning("LastLookedAtDirNotFound");
+            return;
+        }
+
+        if(MovementInput ==  Vector3.up)
+        {
+            dir_obj.data = DIRECTIONS.UP;
+        }
+        if(MovementInput == Vector3.down)
+            dir_obj.data = DIRECTIONS.DOWN;
+        if(MovementInput == Vector3.right)
+            dir_obj.data = DIRECTIONS.RIGHT;
+        if(MovementInput == Vector3.left)
+            dir_obj.data = DIRECTIONS.LEFT;
     }
 }
