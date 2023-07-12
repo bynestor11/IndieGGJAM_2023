@@ -6,6 +6,8 @@ public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField] string InteractionKey = "e";
     [SerializeField] int MinimumInteractionDistance = 1;
+    [SerializeField] bool HoldingRock = false;
+    RockInteractable RockBeingHeld;
     // Ability_Array abilities_object = GetComponent<Ability_Array>();
     // Start is called before the first frame update
     void Start()
@@ -16,11 +18,35 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if (HoldingRock) {
+        ReleaseRock();
+      }
       InteractWithPuzzle();
       InteractWithViking();
     }
     void InteractWithPuzzle() {
       if (Input.GetKeyUp("e")) {
+        if (HoldingRock) {
+          RockInteractable Actually_a_rock = Tree;
+          // align the viking to the red line in Unity
+          switch(transform.rotation) {
+            case 0:
+              Actually_a_rock.DirectionMovement = new Vector3(0,0,1);
+              Actually_a_rock.KeepMoving;
+              break;
+            case 90:
+              
+              break;
+            case 180:
+
+              break;
+            case -90:
+
+              break;
+            default:
+              
+          }
+        }
         GameObject[] objectives = GameObject.FindGameObjectsWithTag("Interactable");
         GameObject objective = objectives[0];
         float minorDistance = float.PositiveInfinity;
@@ -44,24 +70,29 @@ public class PlayerInteraction : MonoBehaviour
           InteractableTree Tree = objective.GetComponent<InteractableTree>();
           if(Tree)
           {
-            int index = Tree.RequiredViking; 
+            int index = Tree.RequiredViking;
           
           // if (abilities_object.viking_abilities[objective.GetComponent<InteractableTree>().RequiredViking]) {
             if (GetComponent<Ability_Array>().viking_abilities[index]) {
             // animation that we got it
-            Debug.Log("Ability triggered!");
+            if (Tree is RockInteractable) {
+              HoldingRock = true;
+              RockBeingHeld = Tree;
+            }
           } else {
             // shrug animation
-            Debug.Log("Ability failed!");
           }
           }
         } else {
-          Debug.Log("Out of range.");
         }
       }
     }
 
     void InteractWithViking() {
+
+    }
+    // checks if the player pressed E then releases rock. Otherwise, does nothing
+    void ReleaseRock() {
 
     }
 }
