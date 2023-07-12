@@ -399,7 +399,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 421464338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526266787b9046e43883dcc7269ec538, type: 3}
+  m_Script: {fileID: 11500000, guid: c0b4cd8a33556b54e86347154f5acab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &584108043
@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 584108049}
   - component: {fileID: 584108048}
   - component: {fileID: 584108050}
+  - component: {fileID: 584108051}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -539,6 +540,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionKey: e
   MinimumInteractionDistance: 1
+--- !u!114 &584108051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584108043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab164effdf69fd24c87bcbf8fa421c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabbed_object: {fileID: 0}
 --- !u!1 &740085443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1084,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1832135429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424b366e5e2f6e5458c3d30b1e2a1290, type: 3}
+  m_Script: {fileID: 11500000, guid: c0b4cd8a33556b54e86347154f5acab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1979393573

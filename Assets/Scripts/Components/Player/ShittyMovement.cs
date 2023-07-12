@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShittyMovement : MonoBehaviour
 {
     [SerializeField]
-    float Speed = 1;
+    public float Speed = 1;
 
     [SerializeField]
     float Cooldown = 0;
