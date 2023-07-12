@@ -12,8 +12,6 @@ public enum DIRECTIONS {
 public class LastLookedAtDirection : MonoBehaviour
 {
     [SerializeField]
-    public DIRECTIONS data;
-    
-    
+    public  DIRECTIONS data;
 
 }
