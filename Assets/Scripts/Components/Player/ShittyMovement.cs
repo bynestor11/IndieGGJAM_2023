@@ -48,13 +48,13 @@ public class ShittyMovement : MonoBehaviour
 
         if(MovementInput ==  Vector3.up)
         {
-            dir_obj.data = DIRECTIONS.Up;
+            dir_obj.data = DIRECTIONS.UP;
         }
         if(MovementInput == Vector3.down)
-            dir_obj.data = DIRECTIONS.Down;
+            dir_obj.data = DIRECTIONS.DOWN;
         if(MovementInput == Vector3.right)
-            dir_obj.data = DIRECTIONS.Right;
+            dir_obj.data = DIRECTIONS.RIGHT;
         if(MovementInput == Vector3.left)
-            dir_obj.data = DIRECTIONS.Left;
+            dir_obj.data = DIRECTIONS.LEFT;
     }
 }

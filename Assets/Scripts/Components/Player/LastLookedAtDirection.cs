@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum DIRECTIONS {
-    Up,
-    Right,
-    Down,
-    Left
+    UP,
+    RIGHT,
+    DOWN,
+    LEFT
 }
 
 public class LastLookedAtDirection : MonoBehaviour
