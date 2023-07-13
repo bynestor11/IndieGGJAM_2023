@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class ShittyMovement : MonoBehaviour
 {
+
+    [SerializeField]
+    public float x_inverter = 1f;
+    [SerializeField]
+    public float y_inverter = 1f;
+    
     [SerializeField]
     public float Speed = 1;
 
@@ -43,9 +49,12 @@ public class ShittyMovement : MonoBehaviour
 
         _update_last_looked_at_pos(_MovementInput);
 
-        transform.position += 
-                new Vector3(_MovementInput.x, 0.0f, _MovementInput.y) 
-                * Speed * Time.deltaTime;
+        
+        // transform.localPosition += 
+        transform.Translate(
+            new Vector3(_MovementInput.x*x_inverter, 0.0f, _MovementInput.y*y_inverter) 
+                    * Speed * Time.deltaTime
+        );
     }
 
     private void _update_last_looked_at_pos(Vector3 MovementInput)
@@ -64,8 +73,8 @@ public class ShittyMovement : MonoBehaviour
         if(MovementInput == Vector3.down)
             dir_obj.data = DIRECTIONS.DOWN;
         if(MovementInput == Vector3.right)
-            dir_obj.data = DIRECTIONS.RIGHT;
-        if(MovementInput == Vector3.left)
             dir_obj.data = DIRECTIONS.LEFT;
+        if(MovementInput == Vector3.left)
+            dir_obj.data = DIRECTIONS.RIGHT;
     }
 }
