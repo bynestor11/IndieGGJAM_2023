@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6162682438927345196}
+  - {fileID: 5938978251579850873}
   m_Father: {fileID: 3951603290151122986}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -94,7 +94,7 @@ Transform:
   - {fileID: 354334544758455327}
   - {fileID: 6096418114985110060}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6014436079653670009
 PrefabInstance:
@@ -172,11 +172,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 745130593897715386, guid: 8f4eb0abb6b513c48b7eecc5d4665b3a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5825094828524191235}
   m_SourcePrefab: {fileID: 100100000, guid: 8f4eb0abb6b513c48b7eecc5d4665b3a, type: 3}
---- !u!4 &6162682438927345196 stripped
+--- !u!4 &5938978251579850873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 80199474726358016, guid: 8f4eb0abb6b513c48b7eecc5d4665b3a,
     type: 3}
   m_PrefabInstance: {fileID: 6014436079653670009}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6422324299574565571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 745130593897715386, guid: 8f4eb0abb6b513c48b7eecc5d4665b3a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6014436079653670009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5825094828524191235
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422324299574565571}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2317233
+  m_Height: 3.698126
+  m_Direction: 1
+  m_Center: {x: 0.05544138, y: 1.7300476, z: 0.00000011920929}
