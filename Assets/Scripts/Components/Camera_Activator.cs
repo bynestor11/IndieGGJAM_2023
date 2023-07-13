@@ -18,9 +18,9 @@ public class Camera_Activator : MonoBehaviour
         
         myCamera.enabled = true;
 
-        foreach(GameObject p in GameObject.FindGameObjectsWithTag("Player") )
-        {
+        // foreach(GameObject p in GameObject.FindGameObjectsWithTag("Player") )
+        // {
             // p.transform.eulerAngles = new Vector3(0, myCamera.transform.eulerAngles.y, 0);
-        }
+        // }
     }
 }

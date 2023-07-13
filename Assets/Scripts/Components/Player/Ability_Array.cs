@@ -4,14 +4,22 @@ using UnityEngine;
 
 public enum VIKINGABILITIES {
     BIG = 0,
-    AXE = 1
+    AXE = 1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10
 }
-
 
 
 public class Ability_Array : MonoBehaviour
 {
-    public const int vikings_abilities_array_size = 2;
+    public const int vikings_abilities_array_size = 11;
 
     [SerializeField]
     public bool[] viking_abilities = new bool[vikings_abilities_array_size];
