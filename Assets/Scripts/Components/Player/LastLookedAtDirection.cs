@@ -12,8 +12,25 @@ public enum DIRECTIONS {
 public class LastLookedAtDirection : MonoBehaviour
 {
     [SerializeField]
-    public DIRECTIONS data;
-    
-    
+    public  DIRECTIONS data;
 
+    public Vector3 dir_vector 
+    {
+        get { 
+            switch (data)
+            { 
+                case DIRECTIONS.UP:
+                    return Vector3.up;
+                case DIRECTIONS.RIGHT:
+                    return Vector3.right;
+                case DIRECTIONS.DOWN:  
+                    return Vector3.down;
+                case DIRECTIONS.LEFT:
+                    return Vector3.left;
+                default:
+                    break;
+            }
+            return Vector3.zero;
+        }
+    }
 }
