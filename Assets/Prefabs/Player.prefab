@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2343547573339104954}
   - component: {fileID: 1926280996829613180}
   - component: {fileID: 3792815503509378057}
+  - component: {fileID: 6851014846622065247}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -54,6 +55,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7970a9effaee4634e9c90ae780e860ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x_inverter: 1
+  y_inverter: 1
   Speed: 4
   Cooldown: 0
 --- !u!54 &2411714351265267223
@@ -153,6 +156,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throw_force: 300
   grabbed_object: {fileID: 0}
+--- !u!114 &6851014846622065247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264596852612524909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640e7461e6132254984eb0090f5a8eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1833666884708216491
 GameObject:
   m_ObjectHideFlags: 0
