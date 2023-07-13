@@ -7,12 +7,14 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] string InteractionKey = "e";
     [SerializeField] int MinimumInteractionDistance = 1;
     [SerializeField] bool HoldingRock = false;
+    [SerializeField] private Animator animator;
     RockInteractable RockBeingHeld;
     // Ability_Array abilities_object = GetComponent<Ability_Array>();
     // Start is called before the first frame update
     void Start()
     {
       GetComponent<Ability_Array>().viking_abilities[1] = true;
+      animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class PlayerInteraction : MonoBehaviour
       InteractWithViking();
     }
     void InteractWithPuzzle() {
-      if (Input.GetKeyUp("e")) {
+      if (Input.GetKeyUp(InteractionKey)) {
         
         GameObject[] objectives = GameObject.FindGameObjectsWithTag("Interactable");
         GameObject objective = objectives[0];
@@ -54,7 +56,9 @@ public class PlayerInteraction : MonoBehaviour
           
           // if (abilities_object.viking_abilities[objective.GetComponent<InteractableTree>().RequiredViking]) {
             if (GetComponent<Ability_Array>().viking_abilities[index]) {
-            // animation that we got it
+              if (Tree is InteractableTree) {
+                animator.SetBool("Swing", true);
+              }
             if (Tree is RockInteractable) {
               HoldingRock = true;
               RockBeingHeld = (RockInteractable)Tree;
