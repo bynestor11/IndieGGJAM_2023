@@ -63,5 +63,6 @@ public class DefaultGrabThrow : MonoBehaviour
         _vikings.viking_abilities[(int)dude] = false;
     }
 
-    private void _throw(){}
+    private void _throw(){
+    }
 }
