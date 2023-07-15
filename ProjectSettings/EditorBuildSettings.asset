@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nes_Test.unity
     guid: f5169e1d2d8208144bbd6a2dc7ddaa22
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Jorge_Test.unity
     guid: ab402826b233ab341b6186d7f8c79e8e
+  - enabled: 1
+    path: Assets/Scenes/Ne_quickfinish.unity
+    guid: 07429630d83ed00478e775f3feb4a5b6
   m_configObjects: {}

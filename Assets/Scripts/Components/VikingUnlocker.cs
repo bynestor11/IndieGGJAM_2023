@@ -11,6 +11,6 @@ public class VikingUnlocker : MonoBehaviour
         Ability_Array arr = col.transform.parent.GetComponent<Ability_Array>();
         arr.viking_abilities[(int)viking_unlocked] = true;
 
-        Destroy(gameObject, 1);
+        Destroy(gameObject);
     }
 }

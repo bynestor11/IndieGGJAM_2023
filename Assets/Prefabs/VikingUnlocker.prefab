@@ -27,12 +27,12 @@ Transform:
   m_GameObject: {fileID: 7870690708569047070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.67, y: 0, z: 4.38}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4886858279290098972}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &7930587802257345798
 SphereCollider:
@@ -448,6 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6789814604053674180, guid: 1af1f883c08398040bddbcdf16fbd894, type: 3}
+    - {fileID: 8517139394908967211, guid: 1af1f883c08398040bddbcdf16fbd894, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

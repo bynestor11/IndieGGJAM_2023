@@ -15,6 +15,8 @@ public class ShittyMovement : MonoBehaviour
 
     [SerializeField]
     float Cooldown = 0;
+    
+    public bool moving = false;
 
     Vector2 _MovementInput = Vector2.zero;
     float _cooldown_counter = 0;
@@ -48,6 +50,9 @@ public class ShittyMovement : MonoBehaviour
         _MovementInput = _MovementInput.normalized;
 
         _update_last_looked_at_pos(_MovementInput);
+
+        moving = _MovementInput != Vector2.zero;
+
 
         
         // transform.localPosition += 
